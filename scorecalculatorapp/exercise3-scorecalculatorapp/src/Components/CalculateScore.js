@@ -1,0 +1,18 @@
+import './../Stylesheets/mystyle.css';
+
+function CalculateScore(props) {
+  const average = props.total / props.goal;
+
+  return (
+    <div className="score-container">
+      <h2>Student Score Card</h2>
+      <p>Name: {props.name}</p>
+      <p>School: {props.school}</p>
+      <p>Total Marks: {props.total}</p>
+      <p>Number of Subjects: {props.goal}</p>
+      <p>Average Score: {average.toFixed(2)}</p>
+    </div>
+  );
+}
+
+export default CalculateScore;
